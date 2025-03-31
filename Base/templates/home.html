@@ -10,7 +10,137 @@
 </head>         <!--Referenciando o CSS-->
 
 <body>
-  <h1> Teste Django </h1>
-  <img src="{% static 'images/minhaImagem.png' %}" alt="imagem no django">
-</body>         <!--Referenciando uma imagem-->
+
+  <!--navbar section-->
+  <nav id="navbar" class="flex s-around bg-color">
+    <div class="left-nav">
+      <h2 class="t-white">Portifolio</h2>
+    </div>
+    <div class="right-nav">
+      <li><a href="#home" class="t-white roboto">Início<i class="fa-solid fa-house"></i></a></li>
+      <li><a href="#about" class="t-white roboto">Sobre mim<i class="fa-solid fa-"></i></a></li>
+      <li><a href="#skills" class="t-white roboto">Habilidades<i class="fa-solid fa-code"></i></a></li>
+      <li><a href="#projects" class="t-white roboto">Projetos<i class="fa-solid fa-project-diagram"></i></a></li>
+      <li><a href="#contact" class="t-white roboto">Contato<i class="fa-solid fa-rocket"></i></a></li>
+    </div>
+  </nav>
+
+  <!--home section-->
+  <section id="home" class="flex s-around sw-80 m-auto">
+    <div class="home-left flex items-center">
+      <div class="home-content">
+        <h6 class="popinss">Olá, sou</h6>
+        <h1 class="t-white">Mateus Citriniti</h1>
+        <h4 class="popinss">Engenheiro de Softare</h4>
+        <a href=" " target="_blank">
+          <button class="btn popinss">Resume</button>
+        </a>
+        <a class="btn live popinss" id="hireme" href="" target="_blank"> Vamos conversar</a>
+      </div>
+    </div>
+
+    <div class="home-right flex s-center items-center">
+      <div class="circle flex s-center items-center" id="mainImage">
+        <img src="{static 'images/'}" alt="picture">
+      </div>
+    </div>
+  </section>
+
+<!--about section-->
+<section id="about">
+  <h1 class="t center my-2 t-white f-2">Sobre mim <menu></menu></h1>
+  <div class="about-container flex s-around">
+    <div class="about-left flex s-center items-center">
+      <img src="{%static 'images/dog.png'%}" alt="dog image">
+    </div>
+  </div>
+
+  <div class="about-right flex">
+    <div class="about-content">
+      <h1 class="t-white m-b-1 popinss">Mateus Citriniti</h1>
+      <p class="t-white popinss">Sou um estudante de Engenharia de Software com paixão por transformar ideias em soluções digitais eficientes e inovadoras.Sou um entusiasta da aprendizagem contínua e busco sempre me manter atualizado com as últimas tendências e melhores práticas do mercado.Meu objetivo é aplicar meus conhecimentos e habilidades para contribuir com projetos desafiadores e que gerem impacto positivo</p>
+      <a href="btn" id="hireme" href="">Me contrate</a>
+    </div>
+  </div>
+</section>
+
+
+<!--skills section-->
+<section id="skills">
+  <h1 class="t-center my-2 t-white f-2">Skills</h1>
+  <div class="services-container flex s-around h-50">
+  <div class=" skills-left flex s-center items-center">
+      <img src="{%static 'images/pro.png'%}" alt="">
+  </div>
+
+  <div class="skills-right flex items-center">
+      <div class="skillss-container">
+          <div class="java bar p-relative"><span class="bar-content left t-white"> Core Java</span><span
+                  class="bar-content right-skills t-white">90%</span></div>
+          <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span><span
+                  class="bar-content right-skills t-white">90%</span></div>
+          <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span><span
+                  class="bar-content right-skills t-white">80%</span></div>
+          <div class="js bar p-relative"><span class="bar-content left t-white">JavaScript</span><span
+                  class="bar-content right-skills t-white">60%</span></div>
+          <div class="python bar p-relative"><span class="bar-content left t-white">Python</span><span
+                  class="bar-content right-skills t-white">50%</span></div>
+          <div class="mysql bar p-relative"><span class="bar-content left t-white">MySQL</span><span
+                  class="bar-content right-skills t-white">40%</span></div>        
+      </div>
+  </div>
+  </div>
+</section>
+
+<!--project section-->
+<section id="projects">
+  <h1 class= "t-center my-2 t-white f-2">Projetos</h1>
+  <div class="project-container flex s-centrer">
+    <div class="project-tem flex f-col s-center items-center">
+      <h1 class="t-white popinss">Pocket Weather</h1>
+      <p class="t-white popinss">Aplicativo de previsão do tempo utilizando o framework Flutter, junto da API openweathermap, que mostra a temperatura atual, dia anterior/posterior e distribuição das nuvens atrvés do google maps.</p>
+      <div class="button flex s-around">
+        <a href="" target="_blank" class="btn mx-1 m-top">Github</a>
+      </div>
+    
+
+      <div class="project-tem flex f-col s-center items-center">
+        <h1 class="t-white popinss">Origin of Tomorrow</h1>
+        <p class="t-white popinss">Pequeno jogo de texto em formato visual novel feito com a engine para jogos godot com implatação do banco de dados Firebase da Google, como parte de um trabalho na disciplina de Engenharia do Conhecimento.</p>
+        <div class="button flex s-around">
+          <a href="" target="_blank" class="btn mx-1 m-top">Github</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!--Contact me section-->
+<section id="contact" class="m-b-1">
+  <h1 class="t-center my-2 t-white f-2">Contato</h1>
+  <div class="contact-container flex s-around items-center">
+    <div class="form" id="contactform">
+      <form method="post">
+        <div class="name form-div">
+          <input type="text" name="Nome" id="name" class="popinss" placeholder="Digite seu nome">
+        </div>
+
+        <div class="email form-div">
+          <input type="email" name="Email" id="" class="popinss" placeholder="Digite seu email" required>
+        </div>
+
+        <div class="texarea form-div">
+          <textarea name="content" id="textarea" cols="30" rows="10"class="popinss" placeholder="Escreva sua mensagem" required> </textarea>
+        </div>
+
+        <button type="submit" class="btn popinss" id="submit">Enviar</button>
+
+      </form>
+    </div>
+  </div>
+
+</section>
+  
+</body>         
 </html>
