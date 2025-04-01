@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
+  <title>Página inicial</title>
   <link rel="stylesheet" href="{%static 'css/style.css'%}">
 </head>         <!--Referenciando o CSS-->
 
@@ -17,11 +17,15 @@
       <h2 class="t-white">Portifolio</h2>
     </div>
     <div class="right-nav">
-      <li><a href="#home" class="t-white roboto">Início<i class="fa-solid fa-house"></i></a></li>
-      <li><a href="#about" class="t-white roboto">Sobre mim<i class="fa-solid fa-"></i></a></li>
-      <li><a href="#skills" class="t-white roboto">Habilidades<i class="fa-solid fa-code"></i></a></li>
-      <li><a href="#projects" class="t-white roboto">Projetos<i class="fa-solid fa-project-diagram"></i></a></li>
+      <ul class="flex">
+        <li><a href="#home" class="t-white roboto">Início<i class="fa-solid fa-house"></i></a></li>
+        <li><a href="#about" class="t-white roboto">Sobre mim<i class="fa-solid fa-user"></i></a></li>
+        <li><a href="#skills" class="t-white roboto">Habilidades<i class="fa-solid fa-code"></i></a></li>
+        <li><a href="#projects" class="t-white roboto">Projetos<i class="fa-solid fa-project-diagram"></i></a></li>
       <li><a href="#contact" class="t-white roboto">Contato<i class="fa-solid fa-rocket"></i></a></li>
+
+      </ul>
+  
     </div>
   </nav>
 
@@ -29,13 +33,11 @@
   <section id="home" class="flex s-around sw-80 m-auto">
     <div class="home-left flex items-center">
       <div class="home-content">
-        <h6 class="popinss">Olá, sou</h6>
+        <h6 class="poppinss">Olá, sou</h6>
         <h1 class="t-white">Mateus Citriniti</h1>
         <h4 class="popinss">Engenheiro de Softare</h4>
-        <a href=" " target="_blank">
-          <button class="btn popinss">Resume</button>
-        </a>
-        <a class="btn live popinss" id="hireme" href="" target="_blank"> Vamos conversar</a>
+      
+        <a class="btn live poppins" id="hireme" href="" target="_blank"> Vamos conversar</a>
       </div>
     </div>
 
@@ -48,19 +50,23 @@
 
 <!--about section-->
 <section id="about">
-  <h1 class="t center my-2 t-white f-2">Sobre mim <menu></menu></h1>
-  <div class="about-container flex s-around">
-    <div class="about-left flex s-center items-center">
-      <img src="{%static 'images/dog.png'%}" alt="dog image">
-    </div>
-  </div>
+  <h1 class="t-center my-2 t-white f-2">Sobre mim</h1>
+  <div class="about-container flex s-around ">
+      <div class=" about-left flex s-center items-center">
+          <!-- Here in src replade the given link with your secondary image link -->
+          <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
+      </div>
 
-  <div class="about-right flex">
-    <div class="about-content">
-      <h1 class="t-white m-b-1 popinss">Mateus Citriniti</h1>
-      <p class="t-white popinss">Sou um estudante de Engenharia de Software com paixão por transformar ideias em soluções digitais eficientes e inovadoras.Sou um entusiasta da aprendizagem contínua e busco sempre me manter atualizado com as últimas tendências e melhores práticas do mercado.Meu objetivo é aplicar meus conhecimentos e habilidades para contribuir com projetos desafiadores e que gerem impacto positivo</p>
-      <a href="btn" id="hireme" href="">Me contrate</a>
-    </div>
+      <div class="about-right flex">
+          <div class="about-content">
+              <p class="t-white poppins">
+                  
+          
+                Sou um estudante de Engenharia de Software com paixão por transformar ideias em soluções digitais eficientes e inovadoras.Sou um entusiasta da aprendizagem contínua e busco sempre me manter atualizado com as últimas tendências e melhores práticas do mercado.Meu objetivo é aplicar meus conhecimentos e habilidades para contribuir com projetos desafiadores e que gerem impacto positivo</p>
+              <a class="btn " id="hireme"
+                  href="">Hire Me</a>
+          </div>
+      </div>
   </div>
 </section>
 
@@ -94,26 +100,30 @@
 
 <!--project section-->
 <section id="projects">
-  <h1 class= "t-center my-2 t-white f-2">Projetos</h1>
-  <div class="project-container flex s-centrer">
-    <div class="project-tem flex f-col s-center items-center">
-      <h1 class="t-white popinss">Pocket Weather</h1>
-      <p class="t-white popinss">Aplicativo de previsão do tempo utilizando o framework Flutter, junto da API openweathermap, que mostra a temperatura atual, dia anterior/posterior e distribuição das nuvens atrvés do google maps.</p>
-      <div class="button flex s-around">
-        <a href="" target="_blank" class="btn mx-1 m-top">Github</a>
-      </div>
+<h1 class=" t-center my-2 t-white f-2">Projects</h1>
+<div class="projects-container flex s-center">
+  <div class="projects-item flex f-col s-center items-center">
     
-
-      <div class="project-tem flex f-col s-center items-center">
-        <h1 class="t-white popinss">Origin of Tomorrow</h1>
-        <p class="t-white popinss">Pequeno jogo de texto em formato visual novel feito com a engine para jogos godot com implatação do banco de dados Firebase da Google, como parte de um trabalho na disciplina de Engenharia do Conhecimento.</p>
-        <div class="button flex s-around">
-          <a href="" target="_blank" class="btn mx-1 m-top">Github</a>
-        </div>
+      <h1 class="t-white poppins">Pocket Weather</h1>
+      <p class="t-white poppins"> Aplicativo de previsão do tempo utilizando o framework Flutter, junto da API openweathermap, que mostra a temperatura atual, dia anterior/posterior e distribuição das nuvens atrvés do google maps.</p>
+      <div class="buttons flex s-around">
+          <a href="https://github.com/C1triniti/PocketWeather"
+              target="_blanks" class="btn mx-1 m-top">GitHub</a>
       </div>
-    </div>
-    
   </div>
+  <div class="projects-item flex f-col s-center items-center">
+    
+      <h1 class="t-white poppins">Origin of Tomorrow</h1>
+      <p class="t-white poppins">Pequeno jogo de texto em formato visual novel feito com a engine para jogos godot com implatação do banco de dados Firebase da Google, como parte de um trabalho na disciplina de Engenharia do Conhecimento.</p>
+      <div class="buttons flex s-around">
+          <a href="https://github.com/gabriel-aires09/origintomorow" target="_blanks"
+              class="btn mx-1 m-top">GitHub</a>
+      </div>
+  </div>
+
+</div>
+
+</div>
 </section>
 
 <!--Contact me section-->
@@ -131,7 +141,7 @@
         </div>
 
         <div class="texarea form-div">
-          <textarea name="content" id="textarea" cols="30" rows="10"class="popinss" placeholder="Escreva sua mensagem" required> </textarea>
+          <textarea name="content" id="textarea" cols="30" rows="10"class="poppins" placeholder="Escreva sua mensagem" required></textarea>
         </div>
 
         <button type="submit" class="btn popinss" id="submit">Enviar</button>
@@ -141,6 +151,24 @@
   </div>
 
 </section>
+
+
+<!--footer section-->
+
+<footer id="footer">
+  <ul class="flex s-center w-80 m-auto my-2">
+    <li><a href="#home" class="popinss">Inicio</a></li>
+    <li><a href="#about" class="popinss">Sobre mim</a></li>
+    <li><a href="#skills" class="popinss">habilidades</a></li>
+    <li><a href="#projects" class="popinss">Projetos</a></li>
+    <li><a href="#portifolio" class="popinss">Inicio</a></li>
+  </ul>
+
+  <p class="t-center my-2 popinss">Todos os direitos reservados - <span class="cpy-white popinss">
+    Mateus Citriniti
+  </span>
+</p>
+</footer>
   
 </body>         
 </html>
