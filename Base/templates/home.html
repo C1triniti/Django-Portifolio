@@ -132,6 +132,8 @@
   <div class="contact-container flex s-around items-center">
     <div class="form" id="contactform">
       <form method="post">
+
+        {% csrf_token %}
         <div class="name form-div">
           <input type="text" name="Nome" id="name" class="popinss" placeholder="Digite seu nome">
         </div>
@@ -141,7 +143,7 @@
         </div>
 
         <div class="texarea form-div">
-          <textarea name="content" id="textarea" cols="30" rows="10"class="poppins" placeholder="Escreva sua mensagem" required></textarea>
+          <textarea name="Content" id="textarea" cols="30" rows="10"class="poppins" placeholder="Escreva sua mensagem" required></textarea>
         </div>
 
         <button type="submit" class="btn popinss" id="submit">Enviar</button>
